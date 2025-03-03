@@ -17,8 +17,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/Academy-Dashboard-Carousel",
-  experimental: {
+    basePath: process.env.NODE_ENV === 'production' ? '/Academy-Dashboard-Carousel' : '',
+    experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
