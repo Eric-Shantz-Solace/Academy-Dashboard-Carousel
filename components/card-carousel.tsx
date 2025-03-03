@@ -99,7 +99,7 @@ export default function CardCarousel() {
                     <CardContent className="p-0">
                       <div className="relative aspect-[3/2] w-full overflow-hidden rounded-t-lg">
                         <Image
-                          src={card.image || "/placeholder.svg"}
+                          src={card.image}
                           alt={card.title}
                           fill
                           className={cn(
@@ -109,6 +109,7 @@ export default function CardCarousel() {
                               : "brightness-75 saturate-50",
                           )}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          unoptimized
                         />
                       </div>
                     </CardContent>
